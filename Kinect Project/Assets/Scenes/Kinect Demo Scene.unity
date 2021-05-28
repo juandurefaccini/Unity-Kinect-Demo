@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 23388288}
   - component: {fileID: 23388291}
   m_Layer: 5
-  m_Name: Begin Button
+  m_Name: CruceBrazos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1766564913}
+      - m_Target: {fileID: 1678527198}
         m_TargetAssemblyTypeName: Kinect_Demo.AnimationStateMachine.m_Animator, Assembly-CSharp
         m_MethodName: OnBeginButton
         m_Mode: 1
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 281206898}
   - component: {fileID: 281206897}
   m_Layer: 5
-  m_Name: Sad Button (1)
+  m_Name: AgarrarCabeza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1766564913}
+      - m_Target: {fileID: 1678527198}
         m_TargetAssemblyTypeName: Kinect_Demo.AnimationStateMachine.m_Animator, Assembly-CSharp
         m_MethodName: OnSadButton
         m_Mode: 1
@@ -1011,9 +1011,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sad
-
-'
+  m_text: Agarrar cabeza
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1221,6 +1219,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1678527198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678527194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df0bd4d15c224678acf999f1167c2917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1753271941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,7 +1336,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1766564912}
-  - component: {fileID: 1766564913}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1349,18 +1358,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1766564913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766564911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df0bd4d15c224678acf999f1167c2917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1917318809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,9 +1415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Begin
-
-'
+  m_text: Cruzar brazos
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1730,7 +1725,7 @@ PrefabInstance:
       objectReference: {fileID: 7400000, guid: a29a8dbabc0401640bebfda4db08025c, type: 2}
     - target: {fileID: 2223639932434330405, guid: f79e2f3c43e4929428657dd633e0ac0c, type: 3}
       propertyPath: m_Animations.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2223639932434330405, guid: f79e2f3c43e4929428657dd633e0ac0c, type: 3}
       propertyPath: m_Animations.Array.data[0]
@@ -1739,7 +1734,15 @@ PrefabInstance:
     - target: {fileID: 2223639932434330405, guid: f79e2f3c43e4929428657dd633e0ac0c, type: 3}
       propertyPath: m_Animations.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7400000, guid: e4daa833f717b8548ad971d187154098, type: 2}
+    - target: {fileID: 2223639932434330405, guid: f79e2f3c43e4929428657dd633e0ac0c, type: 3}
+      propertyPath: m_Animations.Array.data[2]
+      value: 
+      objectReference: {fileID: 7400000, guid: f13a5f3a97909494db75b8fd7fd00880, type: 2}
+    - target: {fileID: 2223639932434330405, guid: f79e2f3c43e4929428657dd633e0ac0c, type: 3}
+      propertyPath: m_Animations.Array.data[3]
+      value: 
+      objectReference: {fileID: 7400000, guid: 615167ad0b3092746a933e9843aa3da4, type: 2}
     - target: {fileID: 2563496969622287784, guid: f79e2f3c43e4929428657dd633e0ac0c, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9295891

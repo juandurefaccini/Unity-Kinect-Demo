@@ -18,6 +18,8 @@ namespace Kinect_Demo.AnimationStateMachine.AnimatorStates
         public override void Animate()
         {
             Debug.Log("Playing Begin animation");
+            Animation animationComponent = MyAnimator.GetComponent<Animation>();
+            animationComponent.Play("crucebrazos");
             Debug.Log("Begin animation ended");
         }
 

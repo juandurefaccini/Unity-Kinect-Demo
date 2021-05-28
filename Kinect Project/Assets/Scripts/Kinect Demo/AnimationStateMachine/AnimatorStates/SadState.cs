@@ -18,6 +18,8 @@ namespace Kinect_Demo.AnimationStateMachine.AnimatorStates
         public override void Animate()
         {
             Debug.Log("Playing Sad animation");
+            Animation animationComponent = MyAnimator.GetComponent<Animation>();
+            animationComponent.Play("oof1");
             Debug.Log("Sad animation ended");
         }
 
