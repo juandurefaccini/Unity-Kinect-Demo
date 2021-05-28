@@ -18,8 +18,8 @@ public class AnimatorOverrider : MonoBehaviour // Cambias las animaciones ent ti
 
     public void changePersonality(string animName, AnimationClip animType) //recibe string 
     {
-            anim = animType;
-            string oldName = animName + "_0";
+        anim = animType;
+        string oldName = animName + "_0";
         if(animType.name != animatorOverrideController[oldName].name){
             animatorOverrideController[oldName] = animType;
         }
