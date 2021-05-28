@@ -9,7 +9,7 @@ namespace Kinect_Demo.AnimationStateMachine
         public void SetState(AnimatorState state)
         {
             State = state;
-            StartCoroutine(State.Start());
+            State.Animate();
         }
     }
 }

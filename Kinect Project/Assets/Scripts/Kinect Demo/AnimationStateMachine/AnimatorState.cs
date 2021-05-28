@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Kinect_Demo.AnimationStateMachine.AnimatorStates;
 using UnityEngine;
@@ -7,19 +8,24 @@ namespace Kinect_Demo.AnimationStateMachine
     public abstract class AnimatorState
     {
         protected m_Animator MyAnimator;
-
+        public String name;
         public AnimatorState(m_Animator animator)
         {
             MyAnimator = animator;
         }
-        public virtual IEnumerator Start()
+        public virtual void Animate()
         {
-            yield break;
+            return;
+        }
+
+        public virtual void OnEntryAction()
+        {
+            return;
         }
         
-        public virtual IEnumerator PlayAnim()
+        public virtual void OnExitAction()
         {
-            yield break;
+            return;
         }
         
         // ReSharper disable Unity.PerformanceAnalysis

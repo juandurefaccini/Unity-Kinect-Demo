@@ -9,45 +9,34 @@ namespace Kinect_Demo.AnimationStateMachine
         private AnimatorState _sad;
         private AnimatorState _begin;
 
-        private AnimatorState _animatorState;
+        private AnimatorState _currentState;
 
         private void Start()
         {
-            _sad = new _sad(this);
-            _begin = new _begin(this);
+            _sad = new SadState(this);
+            _begin = new BeginState(this);
         
-            _animatorState = _begin;
-        }
-
-        public m_Animator()
-        {
-            _sad = new _sad(this);
-            _begin = new _begin(this);
-
-            _animatorState = _begin;
-            
-        }
-
-        public void SetAnimatorState(AnimatorState animatorState)
-        {
-            StartCoroutine(_animatorState.ChangeState(animatorState));
-        }
-
-        public void OnSadButton()
-        {
-            Debug.Log("sadbutton");
-            StartCoroutine(_animatorState.ChangeState(_sad));
-        }
-        
-        public void OnBeginButton()
-        {
-            Debug.Log("beginbutton");
-            StartCoroutine(_animatorState.ChangeState(_begin));
+            _currentState = _begin;
         }
 
         public void SetState(AnimatorState animatorState)
         {
-            _animatorState = animatorState;
+            Debug.Log("--------------------------------------" );
+            Debug.Log("_currentState is "+_currentState.name );
+            _currentState = animatorState;
+            _currentState.OnEntryAction();
+            Debug.Log("_currentState is "+_currentState.name );
+            Debug.Log("--------------------------------------" );
+        }
+
+        public void OnSadButton()
+        {
+            _currentState.ChangeState(_sad);
+        }
+
+        public void OnBeginButton()
+        {
+            _currentState.ChangeState(_begin);
         }
     }
     
