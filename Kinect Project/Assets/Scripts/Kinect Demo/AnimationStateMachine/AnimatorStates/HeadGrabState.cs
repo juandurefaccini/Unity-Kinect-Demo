@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Kinect_Demo.AnimationStateMachine.AnimatorStates
 {
-    public class BeginState : AnimatorState
+    public class HeadGrabState : AnimatorState
     {
-        public BeginState(m_Animator myAnimator) : base(myAnimator)
+        public HeadGrabState(m_Animator myAnimator) : base(myAnimator)
         {
-            name = "Begin"; 
+            name = "HeadGrabState";
         }
 
         public override void OnEntryAction()
@@ -17,16 +17,15 @@ namespace Kinect_Demo.AnimationStateMachine.AnimatorStates
 
         public override void Animate()
         {
-            Debug.Log("Playing Begin animation");
+            Debug.Log("Playing Sad animation");
             Animation animationComponent = MyAnimator.GetComponent<Animation>();
-            animationComponent.Play("crucebrazos");
-            Debug.Log("Begin animation ended");
+            animationComponent.Play("oof1");
+            Debug.Log("Sad animation ended");
         }
 
         public override IEnumerator ChangeState(AnimatorState animatorState)
         {
             MyAnimator.SetState(animatorState);
-            // OnExitAction();
             return base.ChangeState(animatorState);
         }
     }
