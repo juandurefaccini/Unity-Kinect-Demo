@@ -1,0 +1,332 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.9f1 (108be757e447) revision 1084391'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19041.985; Version 2004; 64bit' Language: 'en' Physical Memory: 16330 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+A:\Unity Editors\2020.3.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+A:/jerem/Desktop/GitHubUnity/Unity-Kinect-Demo/Kinect Project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+63537
+Successfully changed project path to: A:/jerem/Desktop/GitHubUnity/Unity-Kinect-Demo/Kinect Project
+A:/jerem/Desktop/GitHubUnity/Unity-Kinect-Demo/Kinect Project
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 34.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.9f1 (108be757e447)
+[Subsystems] Discovering subsystems at path A:/Unity Editors/2020.3.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path A:/jerem/Desktop/GitHubUnity/Unity-Kinect-Demo/Kinect Project/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
+    Vendor:   
+    VRAM:     5991 MB
+    Driver:   27.21.14.6140
+Initialize mono
+Mono path[0] = 'A:/Unity Editors/2020.3.9f1/Editor/Data/Managed'
+Mono path[1] = 'A:/Unity Editors/2020.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'A:/Unity Editors/2020.3.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56196
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: A:/Unity Editors/2020.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004319 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 27.04 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.386 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001494 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.957 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1175 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.5 MB.
+System memory in use after: 60.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1619.
+Total: 1.517500 ms (FindLiveObjects: 0.121000 ms CreateObjectMapping: 0.026900 ms MarkObjects: 1.311300 ms  DeleteObjects: 0.057200 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/Kinect Demo/animationContainer.cs
+  artifactKey: Guid(38e0680ae9cb89044bcfa039f26abced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/animationContainer.cs using Guid(38e0680ae9cb89044bcfa039f26abced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '069c2176569defaa350b0738dd832413') in 0.048266 seconds
+  Import took 0.050035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine
+  artifactKey: Guid(fb76085b7e75f9b48b657719b3e8721a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine using Guid(fb76085b7e75f9b48b657719b3e8721a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a49cfc54002837bb84cf69c24342269') in 0.019918 seconds
+  Import took 0.033570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.740841 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorState.cs
+  artifactKey: Guid(527681a8e5494774ab5b7606627ef12a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorState.cs using Guid(527681a8e5494774ab5b7606627ef12a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9e36cbaa42cbc09feef5c25e09ebd58') in 0.008269 seconds
+  Import took 0.010463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002566 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorState.cs
+  artifactKey: Guid(527681a8e5494774ab5b7606627ef12a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorState.cs using Guid(527681a8e5494774ab5b7606627ef12a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9e36cbaa42cbc09feef5c25e09ebd58') in 0.003826 seconds
+  Import took 0.005695 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.881238 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/m_Animator.cs
+  artifactKey: Guid(df0bd4d15c224678acf999f1167c2917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/m_Animator.cs using Guid(df0bd4d15c224678acf999f1167c2917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47e0fe2865ae4a60e136be40a74f19eb') in 0.007977 seconds
+  Import took 0.010309 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003119 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/m_Animator.cs
+  artifactKey: Guid(df0bd4d15c224678acf999f1167c2917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/m_Animator.cs using Guid(df0bd4d15c224678acf999f1167c2917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47e0fe2865ae4a60e136be40a74f19eb') in 0.005089 seconds
+  Import took 0.006778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.113875 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorStates
+  artifactKey: Guid(638dccc74392450e91523a9648661fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorStates using Guid(638dccc74392450e91523a9648661fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ddf1d649acf1db8185273178f9be336') in 0.012542 seconds
+  Import took 0.014495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.215058 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorStates/FoldedArmsState.cs
+  artifactKey: Guid(436d37dde9ab4457bd9da07f6ec971d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorStates/FoldedArmsState.cs using Guid(436d37dde9ab4457bd9da07f6ec971d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33837c6580bd39eccd522f7a0a730ad3') in 0.025098 seconds
+  Import took 0.027380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.830553 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorStates/HeadGrabState.cs
+  artifactKey: Guid(c93b90e5aaa7449e9832af69bb3809f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorStates/HeadGrabState.cs using Guid(c93b90e5aaa7449e9832af69bb3809f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a725a6427b120e47144bcb269718cf2') in 0.008161 seconds
+  Import took 0.010479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000440 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorStates/HeadGrabState.cs
+  artifactKey: Guid(c93b90e5aaa7449e9832af69bb3809f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorStates/HeadGrabState.cs using Guid(c93b90e5aaa7449e9832af69bb3809f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a725a6427b120e47144bcb269718cf2') in 0.002645 seconds
+  Import took 0.004321 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001063 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.024 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.1 MB.
+System memory in use after: 59.2 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1622.
+Total: 1.857000 ms (FindLiveObjects: 0.152700 ms CreateObjectMapping: 0.037300 ms MarkObjects: 1.647800 ms  DeleteObjects: 0.017700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1494.195129 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorState.cs
+  artifactKey: Guid(527681a8e5494774ab5b7606627ef12a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimatorState.cs using Guid(527681a8e5494774ab5b7606627ef12a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '532f7960f4477d0cfc8bbf8be3d5830e') in 0.009630 seconds
+  Import took 0.011626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22717.905697 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/Deprecated
+  artifactKey: Guid(51a1f17180ae5074ca1e4b7c155168e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/Deprecated using Guid(51a1f17180ae5074ca1e4b7c155168e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '314a2c61be55293b24412ecc476c446b') in 0.009692 seconds
+  Import took 0.019157 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000595 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/Deprecated
+  artifactKey: Guid(51a1f17180ae5074ca1e4b7c155168e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/Deprecated using Guid(51a1f17180ae5074ca1e4b7c155168e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '314a2c61be55293b24412ecc476c446b') in 0.003829 seconds
+  Import took 0.005970 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001083 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.958 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.1 MB.
+System memory in use after: 59.2 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1625.
+Total: 1.572800 ms (FindLiveObjects: 0.137800 ms CreateObjectMapping: 0.026900 ms MarkObjects: 1.391000 ms  DeleteObjects: 0.016000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.304735 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimator.cs
+  artifactKey: Guid(a29b3b9252f6f564495a69b4e647846f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimator.cs using Guid(a29b3b9252f6f564495a69b4e647846f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aad0c0f86d4bab9e8e89e22d9cae93b') in 0.016547 seconds
+  Import took 0.018811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.034582 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimator.cs
+  artifactKey: Guid(a29b3b9252f6f564495a69b4e647846f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimator.cs using Guid(a29b3b9252f6f564495a69b4e647846f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aad0c0f86d4bab9e8e89e22d9cae93b') in 0.004564 seconds
+  Import took 0.007104 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001258 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.939 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1157 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.1 MB.
+System memory in use after: 59.2 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1629.
+Total: 1.870100 ms (FindLiveObjects: 0.140600 ms CreateObjectMapping: 0.035900 ms MarkObjects: 1.678700 ms  DeleteObjects: 0.013800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 469.032249 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimator.cs
+  artifactKey: Guid(a29b3b9252f6f564495a69b4e647846f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimator.cs using Guid(a29b3b9252f6f564495a69b4e647846f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '161db8f06a063299d62feeff4b9b564b') in 0.011234 seconds
+  Import took 0.041842 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018511 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimator.cs
+  artifactKey: Guid(a29b3b9252f6f564495a69b4e647846f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimator.cs using Guid(a29b3b9252f6f564495a69b4e647846f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '161db8f06a063299d62feeff4b9b564b') in 0.003556 seconds
+  Import took 0.006027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.820182 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimationOverrides.cs
+  artifactKey: Guid(c41ea2a6763b1fb4a96137dfbd2ce790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimationOverrides.cs using Guid(c41ea2a6763b1fb4a96137dfbd2ce790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7018221674ad93de14f46221fda71dde') in 0.010280 seconds
+  Import took 0.027739 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 870.091448 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimationOverrides.cs
+  artifactKey: Guid(c41ea2a6763b1fb4a96137dfbd2ce790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/AnimationOverrides.cs using Guid(c41ea2a6763b1fb4a96137dfbd2ce790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6901aba4efa21148a86c926863195d5b') in 0.003091 seconds
+  Import took 0.021279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.411193 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimationState.cs
+  artifactKey: Guid(0ac9c98b6ac448d4da0e484487a8c47a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimationState.cs using Guid(0ac9c98b6ac448d4da0e484487a8c47a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '983c0f650af9c2e67e1a7cadd5cab314') in 0.014094 seconds
+  Import took 0.018057 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 531.770917 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimationState.cs
+  artifactKey: Guid(0ac9c98b6ac448d4da0e484487a8c47a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimationState.cs using Guid(0ac9c98b6ac448d4da0e484487a8c47a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d0fec709a90471252e89bff298ca915') in 0.014938 seconds
+  Import took 0.036082 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.226838 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimator.cs
+  artifactKey: Guid(a29b3b9252f6f564495a69b4e647846f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/CharacterAnimator.cs using Guid(a29b3b9252f6f564495a69b4e647846f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccfb78af0edb6ad9d8cbcd3192584c50') in 0.011208 seconds
+  Import took 0.035635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.067119 seconds.
+  path: Assets/Scripts/Kinect Demo/AnimationStateMachine/ICharacterMoveState.cs
+  artifactKey: Guid(7c6ec7130edf36140a9aa76b2eeb913a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Kinect Demo/AnimationStateMachine/ICharacterMoveState.cs using Guid(7c6ec7130edf36140a9aa76b2eeb913a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f29dbd3f899b5bb27bd3f5b2ce85238') in 0.014436 seconds
+  Import took 0.017364 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001122 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.916 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1159 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.2 MB.
+System memory in use after: 59.3 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1634.
+Total: 1.677400 ms (FindLiveObjects: 0.136500 ms CreateObjectMapping: 0.031900 ms MarkObjects: 1.491900 ms  DeleteObjects: 0.016100 ms)
+
