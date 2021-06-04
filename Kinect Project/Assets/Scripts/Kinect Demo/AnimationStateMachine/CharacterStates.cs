@@ -26,11 +26,11 @@ namespace Kinect_Demo.AnimationStateMachine
     {
         public void Enter(Animation animation)
         {
-            animation.CrossFade("idle_animation"); //placeholder
+            animation.CrossFade("dab1"); //placeholder
         }
         public ICharacterMoveState HandleInput(Animation animation, string movement)
         {
-            
+
             if (movement == "walking")
             {
                 return new WalkingMoveState();
@@ -54,7 +54,7 @@ namespace Kinect_Demo.AnimationStateMachine
 
         public void Enter(Animation animation)
         {
-            animation.CrossFade("walking_animation");
+            animation.CrossFade("humanMacarenaDance");
         }
     }
     

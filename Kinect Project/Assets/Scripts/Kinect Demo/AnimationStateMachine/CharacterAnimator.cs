@@ -1,10 +1,16 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Kinect_Demo.AnimationStateMachine
 {
     public class CharacterAnimator : MonoBehaviour
     {
+        //esto deberia estar en otro lado...basicamente es una instancia de AnimationOverrides,
+        //seguramente no deberia instanciarse aca
+        public AnimationClip happyClipDemo;
+        public Transform MixingTransform;
+        
         private ICharacterMoveState _movementState;
 
         //private ICharacterEmotionState _emotionState;
@@ -52,18 +58,18 @@ namespace Kinect_Demo.AnimationStateMachine
             animationComponent[anim.OverridingClip.name].layer = 1; //el movimiento esta en la capa 0 por
             //defecto, poner las emociones en la capa 1 hace que se reemplace la animacion de
             //movimiento por la animacion de emocion.
-            animationComponent[anim.OverridingClip.name].blendMode = anim.BlendMode;
-            animationComponent[anim.OverridingClip.name].wrapMode = anim.WrapMode;
+            //animationComponent[anim.OverridingClip.name].blendMode = anim.BlendMode;
+            //animationComponent[anim.OverridingClip.name].wrapMode = anim.WrapMode;
             animationComponent[anim.OverridingClip.name].enabled = true;
-            animationComponent[anim.OverridingClip.name].weight = anim.weight;
-            animationComponent[anim.OverridingClip.name].speed = anim.speed;
+            //animationComponent[anim.OverridingClip.name].weight = anim.weight;
+            //animationComponent[anim.OverridingClip.name].speed = anim.speed;
         }
             
 
         private void SetEmotionAnimations(Animation animationComponent, List<AnimationOverrides> overridesList)
         {
             foreach (AnimationOverrides anim in overridesList)
-            { 
+            {
                 if (animationComponent[anim.OverridingClip.name] == null) //si no esta, lo agregamos
                 {
                     animationComponent.AddClip(anim.OverridingClip, anim.OverridingClip.name);
@@ -73,7 +79,9 @@ namespace Kinect_Demo.AnimationStateMachine
                 {
                     SetAnimConfig(animationComponent, anim);
                 }
-                animationComponent.CrossFade(anim.OverridingClip.name);
+                Debug.Log(anim.OverridingClip.name);
+                Debug.Log(anim.ClipMixingTransform.name);
+                animationComponent.Play(anim.OverridingClip.name);
             }
         }
         
@@ -86,7 +94,16 @@ namespace Kinect_Demo.AnimationStateMachine
 
         _animation = GetComponent<Animation>();
         
-        //conseguir los overrides de la IA
+        //conseguir los overrides de la IA (placeholder)
+        var animationOverrides = new AnimationOverrides
+        {
+            OverridingClip = happyClipDemo, WrapMode = WrapMode.Loop, ClipMixingTransform = MixingTransform
+        };
+        var overridesList = new List<AnimationOverrides> {animationOverrides};
+        var keyValuePair = new KeyValuePair<string, List<AnimationOverrides>>("happy", overridesList);
+        EmotionOverrides = new Dictionary<string, List<AnimationOverrides>>();
+        EmotionOverrides.Add(keyValuePair.Key, keyValuePair.Value);
+        Debug.Log(EmotionOverrides["happy"][0].OverridingClip.name);
         }
 
         // Update is called once per frame
@@ -94,8 +111,7 @@ namespace Kinect_Demo.AnimationStateMachine
         {
             var detectedMovement = "walking"; //placeholder
             var detectedEmotion = "happy"; //placeholder
-            var overridesList = EmotionOverrides[detectedEmotion];
-            HandleInput(_animation, detectedMovement, overridesList);
+            HandleInput(_animation, detectedMovement, EmotionOverrides[detectedEmotion]);
         }
     }
 }
