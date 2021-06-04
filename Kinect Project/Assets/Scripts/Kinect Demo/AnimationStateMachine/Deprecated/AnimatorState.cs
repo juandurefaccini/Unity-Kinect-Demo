@@ -8,7 +8,7 @@ namespace Kinect_Demo.AnimationStateMachine
     public abstract class AnimatorState
     {
         protected m_Animator MyAnimator;
-        public String name;
+        public string name;
         public AnimatorState(m_Animator animator)
         {
             MyAnimator = animator;
