@@ -10,6 +10,7 @@ namespace Kinect_Demo.AnimationStateMachine
         public void Enter(Animation animation);
     }
 
+    
     public interface ICharacterEmotionState
     {
         public ICharacterEmotionState HandleInput(Animation animation, string emotion,
@@ -54,7 +55,7 @@ namespace Kinect_Demo.AnimationStateMachine
 
         public void Enter(Animation animation)
         {
-            animation.CrossFade("humanMacarenaDance");
+            animation.CrossFade("saludo1");
         }
     }
     

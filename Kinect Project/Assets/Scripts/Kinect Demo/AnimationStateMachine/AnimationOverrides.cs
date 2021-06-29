@@ -11,5 +11,6 @@ namespace Kinect_Demo.AnimationStateMachine
         public WrapMode WrapMode;
         public float weight;
         public float speed;
+        public int layer;
     }
 }
