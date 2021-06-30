@@ -301,6 +301,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6689efbc903561947a01b6a040ddfc95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &68015137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68015134}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb68fdd11e857a4bbd94aa76daa8f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorController: {fileID: 0}
 --- !u!4 &127073472 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3321919801592875672, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}
@@ -776,7 +789,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599880912}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee5b5da7700a3384da748e46f9784e91, type: 3}
   m_Name: 
@@ -2520,6 +2533,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -5480977901411583989, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}
   m_PrefabInstance: {fileID: 904946646}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1620469348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1620469350}
+  m_Layer: 0
+  m_Name: AnimationCompositionController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1620469350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620469348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.16669227, y: 0.064347744, z: -2.440527}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1625086414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3432401550182100168, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}

@@ -6,34 +6,35 @@ public class AnimationCompositionController : MonoBehaviour
 {
     public class LayerInfo
     {
-        public string destinyState;
+        public string destinyState { get; }
 
         public LayerInfo(string destinyState)
         {
             this.destinyState = destinyState;
         }
+
     }
 
-    public class Block
+    private class Block
     {
         // Clase encargada de almacenar los distintos cambios que se le haran a los layers
-        List<LayerInfo> layerInfo;
+        private Dictionary<int, LayerInfo> stateTransitions;
 
 
-        public Block(List<LayerInfo> _layerInfo)
+        public Block(Dictionary<int, LayerInfo> stateTransitions)
         {
-            layerInfo = _layerInfo;
+            this.stateTransitions = stateTransitions;
         }
 
         // Diccionario para almacenar el layer a editar y el valor del mismo
 
-        public List<LayerInfo> GetLayerInfos()
+        public Dictionary<int, LayerInfo> GetLayerInfos()
         {
-            return layerInfo;
+            return stateTransitions;
         }
     }
 
-    public class BlockQueue
+    private class BlockQueue
     {
         // Cola de prioridad de bloques que nos permite secuencializar las animaciones
         Queue<Block> blocks;
@@ -51,34 +52,49 @@ public class AnimationCompositionController : MonoBehaviour
 
     private readonly BlockQueue _blockQueue = new BlockQueue();
     public Animator animatorController;
+    public bool isReady;
 
     private void Start()
     {
-        List<LayerInfo> l1 = new List<LayerInfo>();
-        l1.Add(new LayerInfo("crossArms"));
-        Block b1 = new Block(l1);
+        animatorController = GetComponent<Animator>(); // Asigno el controller del personaje
+        Dictionary<int, LayerInfo> d1 = new Dictionary<int, LayerInfo>();
+        d1[1] = new LayerInfo("CrossArms");
+        // l1.Add(new LayerInfo("HeadGrab"));
+        Block b1 = new Block(d1);
 
         _blockQueue.Enqueue(b1);
+    }
+
+    private bool AnimatorIsReady()
+    {
+        for (int i = 1; i < animatorController.layerCount; i++)
+        {
+            if (!animatorController.GetCurrentAnimatorStateInfo(i).IsName("ready"))
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     // Aca podria ir un observer con el animator
     private void Update()
     {
-        if (_blockQueue.IsEmpty())
+        if (!_blockQueue.IsEmpty()) // Si hay bloques
         {
-            // Por qeu joraca es un cero
-            if (animatorController.GetCurrentAnimatorStateInfo(0).IsName("ready"))
+            if (AnimatorIsReady()) // Si todos los layers estan en el estado "Ready"
             {
-                ExecuteAnimationBlock(_blockQueue.Dequeue());
+                Block currentBlock = _blockQueue.Dequeue();
+                ExecuteAnimationBlock(currentBlock);
             }
         }
-
     }
 
     private void ExecuteAnimationBlock(Block block)
     {
         // Ejecuto el bloque
-        foreach (LayerInfo layerInfo in block.GetLayerInfos()) // Por cada trigger de cada capa
+        foreach (LayerInfo layerInfo in block.GetLayerInfos().Values) // Por cada trigger de cada capa
         {
             animatorController.SetTrigger(layerInfo.destinyState); // Lo ejecuto
         }

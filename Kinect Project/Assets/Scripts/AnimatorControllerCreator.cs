@@ -9,7 +9,7 @@ public class AnimatorControllerCreator : MonoBehaviour
 {
     public AvatarMask[] avatarMasks;
     public Motion[] animations;
-
+    
     void Start()
     {
         CreateController();
