@@ -296,7 +296,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68015134}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6689efbc903561947a01b6a040ddfc95, type: 3}
   m_Name: 
@@ -308,12 +308,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68015134}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cb68fdd11e857a4bbd94aa76daa8f4b, type: 3}
+  m_Script: {fileID: 11500000, guid: fa584fda42fbfb549895327ec3c8f1c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animatorController: {fileID: 0}
 --- !u!4 &127073472 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3321919801592875672, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}
@@ -781,7 +780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &599880913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,13 +793,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee5b5da7700a3384da748e46f9784e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarMasks:
-  - {fileID: 31900000, guid: 8f57a71956c04404bb6a4bb419f6c50a, type: 2}
-  - {fileID: 31900000, guid: 6ea4807218de4c143ad06e84f2ef02db, type: 2}
-  animations:
-  - {fileID: 7400000, guid: e110927a411b46641afa54c9c1b7297c, type: 2}
-  - {fileID: 7400000, guid: 45284095fc1178146ac43503c4e539ae, type: 2}
-  - {fileID: 7400000, guid: dd242cd7ceb081e4dad13c2b16145888, type: 2}
+  layers:
+  - layerName: BaseLayer
+    _stateDefinitions:
+    - stateName: default
+      stateAnimation: {fileID: 7400000, guid: e15cc28613b33424d8ef8ced449baeaa, type: 2}
+      parameterName: 
+    mask: {fileID: 0}
+  - layerName: TorsoLayer
+    _stateDefinitions:
+    - stateName: stateCrossArms
+      stateAnimation: {fileID: 7400000, guid: e110927a411b46641afa54c9c1b7297c, type: 2}
+      parameterName: CrossArms
+    - stateName: stateHandWave
+      stateAnimation: {fileID: 7400000, guid: 45284095fc1178146ac43503c4e539ae, type: 2}
+      parameterName: HandWave
+    mask: {fileID: 31900000, guid: 8f57a71956c04404bb6a4bb419f6c50a, type: 2}
+  - layerName: HeadLayer
+    _stateDefinitions:
+    - stateName: stateGrabHead
+      stateAnimation: {fileID: 7400000, guid: dd242cd7ceb081e4dad13c2b16145888, type: 2}
+      parameterName: HeadGrab
+    mask: {fileID: 31900000, guid: 6ea4807218de4c143ad06e84f2ef02db, type: 2}
+  controllerName: default
 --- !u!4 &599880914
 Transform:
   m_ObjectHideFlags: 0
@@ -1873,6 +1888,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f8c9073ef24164a8aa5aa83da66973, type: 3}
+--- !u!1 &951715535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951715537}
+  - component: {fileID: 951715536}
+  m_Layer: 0
+  m_Name: AnimatorControllerCreator (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &951715536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951715535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5b5da7700a3384da748e46f9784e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - layerName: BaseLayer
+    _stateDefinitions:
+    - stateName: default
+      stateAnimation: {fileID: 7400000, guid: e15cc28613b33424d8ef8ced449baeaa, type: 2}
+      parameterName: 
+    mask: {fileID: 0}
+  - layerName: TorsoLayer
+    _stateDefinitions:
+    - stateName: stateCrossArms
+      stateAnimation: {fileID: 7400000, guid: e110927a411b46641afa54c9c1b7297c, type: 2}
+      parameterName: CrossArms
+    mask: {fileID: 31900000, guid: 8f57a71956c04404bb6a4bb419f6c50a, type: 2}
+  - layerName: RightArmLayer
+    _stateDefinitions:
+    - stateName: stateHandWave
+      stateAnimation: {fileID: 7400000, guid: 45284095fc1178146ac43503c4e539ae, type: 2}
+      parameterName: HandWave
+    mask: {fileID: 31900000, guid: 7f9031c187e8af542aaa2db206bc4256, type: 2}
+  - layerName: LeftArmLayer
+    _stateDefinitions: []
+    mask: {fileID: 31900000, guid: c35b85c7471ebfa439a2883f92b94271, type: 2}
+  - layerName: HeadLayer
+    _stateDefinitions:
+    - stateName: stateGrabHead
+      stateAnimation: {fileID: 7400000, guid: dd242cd7ceb081e4dad13c2b16145888, type: 2}
+      parameterName: HeadGrab
+    mask: {fileID: 31900000, guid: 6ea4807218de4c143ad06e84f2ef02db, type: 2}
+  controllerName: conBrazos
+--- !u!4 &951715537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951715535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.11281645, y: 1.0455426, z: 0.6484201}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &953279282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1564860333797465651, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}
@@ -2533,36 +2620,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -5480977901411583989, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}
   m_PrefabInstance: {fileID: 904946646}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1620469348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1620469350}
-  m_Layer: 0
-  m_Name: AnimationCompositionController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1620469350
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1620469348}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16669227, y: 0.064347744, z: -2.440527}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1625086414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3432401550182100168, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}
@@ -2869,9 +2926,13 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: b59410d98530f0849b2d03f7e946fb9f, type: 2}
+      objectReference: {fileID: 9100000, guid: b198e09c04023354ca24b5ef36b9ddee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}
 --- !u!4 &1728781526 stripped
