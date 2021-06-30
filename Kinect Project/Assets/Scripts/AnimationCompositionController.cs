@@ -51,12 +51,19 @@ public class AnimationCompositionController : MonoBehaviour
     }
 
     private readonly BlockQueue _blockQueue = new BlockQueue();
-    public Animator animatorController;
-    public bool isReady;
+    private Animator animatorController;
+    private int currentReadyStates;
+    private int totalReadyStates;
 
     private void Start()
     {
         animatorController = GetComponent<Animator>(); // Asigno el controller del personaje
+        var readyBehaviours = animatorController.GetBehaviours<ReadyBehaviour>();
+        foreach (var behaviour in readyBehaviours)
+        {
+            behaviour.CompositionController = this;
+        }
+        
         List <LayerInfo> d1 = new List <LayerInfo>();
         d1.Add(new LayerInfo("CrossArms"));
         d1.Add(new LayerInfo("HandWave"));
@@ -68,42 +75,30 @@ public class AnimationCompositionController : MonoBehaviour
 
         _blockQueue.Enqueue(b1);
         _blockQueue.Enqueue(b2);
-        // _blockQueue.Enqueue(b1);
-        //PeekBlocks() <-- va a haber uno
-        isReady = true;
+        
+        currentReadyStates = 0;
+        totalReadyStates = readyBehaviours.Length;
     }
-    
-    private bool AnimatorIsReady()
-    {
-        for (int i = 1; i < animatorController.layerCount; i++)
-        {
-            string layerName = animatorController.GetLayerName(i);
-            // Debug.Log(layerName+".ready");
-            var currentAnimationStateInfo = animatorController.GetCurrentAnimatorStateInfo(i);
-            if (!currentAnimationStateInfo.IsName(layerName + ".ready"))
-            {
-                Debug.Log("i´m in");
-                return false;
-            }
-        }
 
-        return true;
+    public void signalAnimationComplete()
+    {
+        currentReadyStates++;
+
+        Debug.Log(currentReadyStates);
     }
-    
+
     // Aca podria ir un observer con el animator
     private void Update()
     {
-        if (_blockQueue.IsEmpty()) return;
-        if (!isReady) return;
-        isReady = false;
-        Debug.Log("imheremyfellas");
-        Block currentBlock = _blockQueue.Dequeue();
-        ExecuteAnimationBlock(currentBlock);
-    }
-
-    private void LateUpdate()
-    {
-        isReady = AnimatorIsReady();     
+        if (!_blockQueue.IsEmpty())
+        {
+            if (currentReadyStates == totalReadyStates)
+            {
+                Debug.Log("imheremyfellas"); //gets here immediately, should be a few seconds
+                Block currentBlock = _blockQueue.Dequeue();
+                ExecuteAnimationBlock(currentBlock);
+            }
+        }
     }
 
     private void ExecuteAnimationBlock(Block block)
@@ -112,6 +107,7 @@ public class AnimationCompositionController : MonoBehaviour
         foreach (LayerInfo layerInfo in block.GetLayerInfos()) // Por cada trigger de cada capa
         {
             animatorController.SetTrigger(layerInfo.destinyState); // Lo ejecuto
+            currentReadyStates--;
         }
     }
 }

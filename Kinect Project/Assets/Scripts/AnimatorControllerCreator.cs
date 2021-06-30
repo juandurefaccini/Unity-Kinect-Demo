@@ -7,6 +7,16 @@ using UnityEditor.Animations;
 
 public class AnimatorControllerCreator : MonoBehaviour
 {
+    /*
+    public class ReadyBehaviour : StateMachineBehaviour
+    {
+        public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+        {
+            Debug.Log("Entro al estado Ready");
+        }
+    }
+    */
+    
     [Serializable] public struct stateDefinition
     {
         public string stateName;
@@ -60,6 +70,7 @@ public class AnimatorControllerCreator : MonoBehaviour
             //estados
             var layerReadyState = currentStateMachine.AddState("ready");
             currentStateMachine.defaultState = layerReadyState;
+            layerReadyState.AddStateMachineBehaviour<ReadyBehaviour>();
             
             foreach (var stateDefinition in currentLayerDef._stateDefinitions)
             {
