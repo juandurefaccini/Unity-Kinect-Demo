@@ -18,17 +18,17 @@ public class AnimationCompositionController : MonoBehaviour
     private class Block
     {
         // Clase encargada de almacenar los distintos cambios que se le haran a los layers
-        private Dictionary<int, LayerInfo> stateTransitions;
+        private List <LayerInfo> stateTransitions;
 
 
-        public Block(Dictionary<int, LayerInfo> stateTransitions)
+        public Block(List <LayerInfo> stateTransitions)
         {
             this.stateTransitions = stateTransitions;
         }
 
         // Diccionario para almacenar el layer a editar y el valor del mismo
 
-        public Dictionary<int, LayerInfo> GetLayerInfos()
+        public List <LayerInfo> GetLayerInfos()
         {
             return stateTransitions;
         }
@@ -47,44 +47,54 @@ public class AnimationCompositionController : MonoBehaviour
         // Desencolar
         public Block Dequeue() => blocks.Dequeue();
 
-        public bool IsEmpty() => blocks.Peek() is null; // Peek agarra la primera, si es null esta vacia
+        public bool IsEmpty() => blocks.Count == 0; // Peek agarra la primera, si es null esta vacia
     }
 
     private readonly BlockQueue _blockQueue = new BlockQueue();
-    public Animator animatorController;
-    public bool isReady;
+    private Animator animatorController;
+    private int currentReadyStates;
+    private int totalReadyStates;
 
     private void Start()
     {
         animatorController = GetComponent<Animator>(); // Asigno el controller del personaje
-        Dictionary<int, LayerInfo> d1 = new Dictionary<int, LayerInfo>();
-        d1[1] = new LayerInfo("CrossArms");
-        // l1.Add(new LayerInfo("HeadGrab"));
+        var readyBehaviours = animatorController.GetBehaviours<ReadyBehaviour>();
+        foreach (var behaviour in readyBehaviours)
+        {
+            behaviour.CompositionController = this;
+        }
+        
+        List <LayerInfo> d1 = new List <LayerInfo>();
+        d1.Add(new LayerInfo("CrossArms"));
+        d1.Add(new LayerInfo("HandWave"));
         Block b1 = new Block(d1);
 
+        List <LayerInfo> d2 = new List <LayerInfo>();
+        d2.Add(new LayerInfo("CrossArms"));
+        Block b2 = new Block(d2);
+
         _blockQueue.Enqueue(b1);
+        _blockQueue.Enqueue(b2);
+        
+        currentReadyStates = 0;
+        totalReadyStates = readyBehaviours.Length;
     }
 
-    private bool AnimatorIsReady()
+    public void signalAnimationComplete()
     {
-        for (int i = 1; i < animatorController.layerCount; i++)
-        {
-            if (!animatorController.GetCurrentAnimatorStateInfo(i).IsName("ready"))
-            {
-                return false;
-            }
-        }
+        currentReadyStates++;
 
-        return true;
+        Debug.Log(currentReadyStates);
     }
 
     // Aca podria ir un observer con el animator
     private void Update()
     {
-        if (!_blockQueue.IsEmpty()) // Si hay bloques
+        if (!_blockQueue.IsEmpty())
         {
-            if (AnimatorIsReady()) // Si todos los layers estan en el estado "Ready"
+            if (currentReadyStates == totalReadyStates)
             {
+                Debug.Log("imheremyfellas"); //gets here immediately, should be a few seconds
                 Block currentBlock = _blockQueue.Dequeue();
                 ExecuteAnimationBlock(currentBlock);
             }
@@ -94,9 +104,10 @@ public class AnimationCompositionController : MonoBehaviour
     private void ExecuteAnimationBlock(Block block)
     {
         // Ejecuto el bloque
-        foreach (LayerInfo layerInfo in block.GetLayerInfos().Values) // Por cada trigger de cada capa
+        foreach (LayerInfo layerInfo in block.GetLayerInfos()) // Por cada trigger de cada capa
         {
             animatorController.SetTrigger(layerInfo.destinyState); // Lo ejecuto
+            currentReadyStates--;
         }
     }
 }
