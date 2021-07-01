@@ -63,30 +63,46 @@ public class AnimationComposer : MonoBehaviour
             behaviour.CompositionController = this;
         }
 
+        //ANGRY-START
         List <LayerInfo> d1 = new List <LayerInfo>();
         d1.Add(new LayerInfo("CrossArms"));
-        d1.Add(new LayerInfo("HandWave"));
-        Block b1 = new Block(d1);
-
+        d1.Add(new LayerInfo("RotTorsoR"));
+        
         List <LayerInfo> d2 = new List <LayerInfo>();
+        d2.Add(new LayerInfo("clearTorsoLayer")); 
         d2.Add(new LayerInfo("clearRightArmLayer"));
-        d2.Add(new LayerInfo("ScratchHeadL"));
+        d2.Add(new LayerInfo("Stomp")); 
         
         List <LayerInfo> d3 = new List <LayerInfo>();
+        d3.Add(new LayerInfo("clearLegsLayer"));
         d3.Add(new LayerInfo("clearTorsoLayer"));
         d3.Add(new LayerInfo("clearLeftArmLayer"));
-        d3.Add(new LayerInfo("RaiseArmR"));
 
-        List <LayerInfo> d4 = new List <LayerInfo>();
-        d4.Add(new LayerInfo("clearRightArmLayer"));
-        Block b4 = new Block(d4);
+        Block b1 = new Block(d1);
         Block b2 = new Block(d2);
         Block b3 = new Block(d3);
 
         _blockQueue.Enqueue(b1);
         _blockQueue.Enqueue(b2);
         _blockQueue.Enqueue(b3);
-        _blockQueue.Enqueue(b4);
+        //ANGRY-END
+        
+        //HAPPY-START
+        List <LayerInfo> d4 = new List <LayerInfo>();
+        d4.Add(new LayerInfo("Jump"));
+        //d4.Add(new LayerInfo("RaiseArmsOverHead"));
+        _blockQueue.Enqueue(new Block(d4));
+        List <LayerInfo> d5 = new List <LayerInfo>();
+        d5.Add(new LayerInfo("ThumbsUp"));
+        _blockQueue.Enqueue(new Block(d5));
+        //HAPPY-END
+        
+        //SAD-START
+        List <LayerInfo> d6 = new List <LayerInfo>();
+        d6.Add(new LayerInfo("Sad"));
+        d6.Add(new LayerInfo("GrabHead"));
+        _blockQueue.Enqueue(new Block(d6));
+        //SAD-END
     }
 
     private void Update()

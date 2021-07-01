@@ -3841,9 +3841,24 @@ MonoBehaviour:
     mask: {fileID: 0}
   - layerName: TorsoLayer
     _stateDefinitions:
+    - stateName: stateRotTorsoL
+      stateAnimation: {fileID: 7400000, guid: 5040eba905cea4247b618dc3d17d1cdd, type: 2}
+      parameterName: RotTorsoL
+    - stateName: stateRotTorsoR
+      stateAnimation: {fileID: 7400000, guid: 82f9ef51641fec84fa211bb8105ceb09, type: 2}
+      parameterName: RotTorsoR
+    - stateName: stateSad
+      stateAnimation: {fileID: 7400000, guid: 2d09bfaa2a2fa4d4facb1dca82038add, type: 2}
+      parameterName: Sad
+    mask: {fileID: 31900000, guid: 067cbc6a989c94f4db211daef77174db, type: 2}
+  - layerName: BothArmsLayer
+    _stateDefinitions:
     - stateName: stateCrossArms
       stateAnimation: {fileID: 7400000, guid: e110927a411b46641afa54c9c1b7297c, type: 2}
       parameterName: CrossArms
+    - stateName: stateGrabHead
+      stateAnimation: {fileID: 7400000, guid: dd242cd7ceb081e4dad13c2b16145888, type: 2}
+      parameterName: GrabHead
     mask: {fileID: 31900000, guid: 8f57a71956c04404bb6a4bb419f6c50a, type: 2}
   - layerName: LeftArmLayer
     _stateDefinitions:
@@ -3865,14 +3880,20 @@ MonoBehaviour:
     - stateName: stateScratchHeadR
       stateAnimation: {fileID: 7400000, guid: 72eec79589870e14fa0b9b1fc44ed41c, type: 2}
       parameterName: ScratchHeadR
+    - stateName: stateThumbsUp
+      stateAnimation: {fileID: 7400000, guid: a3a5492818661874c9e9c5c2f7d6912a, type: 2}
+      parameterName: ThumbsUp
     mask: {fileID: 31900000, guid: 7f9031c187e8af542aaa2db206bc4256, type: 2}
-  - layerName: HeadLayer
+  - layerName: LegsLayer
     _stateDefinitions:
-    - stateName: stateGrabHead
-      stateAnimation: {fileID: 7400000, guid: dd242cd7ceb081e4dad13c2b16145888, type: 2}
-      parameterName: HeadGrab
-    mask: {fileID: 31900000, guid: 6ea4807218de4c143ad06e84f2ef02db, type: 2}
-  controllerName: ControllerPrueba
+    - stateName: stateJump
+      stateAnimation: {fileID: 7400000, guid: a2e2c9f57cf489c478642ec0e7b189a0, type: 2}
+      parameterName: Jump
+    - stateName: stateStomp
+      stateAnimation: {fileID: 7400000, guid: a9f5fc4c69e11584c81da02f1bddb904, type: 2}
+      parameterName: Stomp
+    mask: {fileID: 31900000, guid: 0f37eaef88dc09e46aedbd69b1e75ed8, type: 2}
+  controllerName: ControllerComp
 --- !u!4 &1032217269
 Transform:
   m_ObjectHideFlags: 0
@@ -6034,7 +6055,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: b91ff6de2c8af9645a6c1fe20383d7b7, type: 2}
+      objectReference: {fileID: 9100000, guid: 3110117e337eabb4497fd76633204d8a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}
 --- !u!4 &1728781526 stripped
