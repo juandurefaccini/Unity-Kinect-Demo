@@ -77,6 +77,7 @@ public class AnimationComposer : MonoBehaviour
         d3.Add(new LayerInfo("clearLegsLayer"));
         d3.Add(new LayerInfo("clearTorsoLayer"));
         d3.Add(new LayerInfo("clearLeftArmLayer"));
+        d3.Add(new LayerInfo("clearBothArmsLayer"));
 
         Block b1 = new Block(d1);
         Block b2 = new Block(d2);
@@ -95,6 +96,10 @@ public class AnimationComposer : MonoBehaviour
         List <LayerInfo> d5 = new List <LayerInfo>();
         d5.Add(new LayerInfo("ThumbsUp"));
         _blockQueue.Enqueue(new Block(d5));
+        List <LayerInfo> dc = new List <LayerInfo>();
+        dc.Add(new LayerInfo("clearLegsLayer"));
+        dc.Add(new LayerInfo("clearRightArmLayer"));
+        _blockQueue.Enqueue(new Block(dc));
         //HAPPY-END
         
         //SAD-START
@@ -102,6 +107,10 @@ public class AnimationComposer : MonoBehaviour
         d6.Add(new LayerInfo("Sad"));
         d6.Add(new LayerInfo("GrabHead"));
         _blockQueue.Enqueue(new Block(d6));
+        List <LayerInfo> d7 = new List <LayerInfo>();
+        d7.Add(new LayerInfo("clearTorsoLayer"));
+        d7.Add(new LayerInfo("clearBothArmsLayer"));
+        _blockQueue.Enqueue(new Block(d7));
         //SAD-END
     }
 
