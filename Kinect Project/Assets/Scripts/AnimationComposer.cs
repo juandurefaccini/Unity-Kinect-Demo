@@ -16,15 +16,21 @@ public class AnimationComposer : MonoBehaviour
 
     }
 
-    private class Block
+    public class Block
     {
         // Clase encargada de almacenar los distintos cambios que se le haran a los layers
         private List <LayerInfo> stateTransitions;
 
 
+        // DEPRECATED
         public Block(List <LayerInfo> stateTransitions)
         {
             this.stateTransitions = stateTransitions;
+        }
+
+        public Block()
+        {
+            this.stateTransitions = new List<LayerInfo>();
         }
 
         // Diccionario para almacenar el layer a editar y el valor del mismo
@@ -32,6 +38,11 @@ public class AnimationComposer : MonoBehaviour
         public List <LayerInfo> GetLayerInfos()
         {
             return stateTransitions;
+        }
+        
+        public void AddLayerInfo(LayerInfo layerInfo)
+        {
+            stateTransitions.Add(layerInfo);
         }
     }
 
@@ -105,14 +116,14 @@ public class AnimationComposer : MonoBehaviour
         //SAD-END
     }
 
-    private void Update()
-    {
-        if (!_blockQueue.IsEmpty() && animsInProgress == 0)
-        {
-            Block currentBlock = _blockQueue.Dequeue();
-            ExecuteAnimationBlock(currentBlock);
-        }
-    }
+    // private void Update()
+    // {
+    //     if (!_blockQueue.IsEmpty() && animsInProgress == 0)
+    //     {
+    //         Block currentBlock = _blockQueue.Dequeue();
+    //         ExecuteAnimationBlock(currentBlock);
+    //     }
+    // }
 
     private void ExecuteAnimationBlock(Block block)
     {
@@ -131,5 +142,23 @@ public class AnimationComposer : MonoBehaviour
     public void signalAnimationComplete()
     {
         animsInProgress--;
+    }
+
+    public void AddBlock(Block block)
+    {
+        _blockQueue.Enqueue(block);
+    }
+
+    public void StartAnimations()
+    {
+        Debug.Log("Aca arrancaria la animacion");
+        while (!_blockQueue.IsEmpty())
+        {
+            if (animsInProgress == 0)
+            {
+                Block currentBlock = _blockQueue.Dequeue();
+                ExecuteAnimationBlock(currentBlock);
+            }
+        }
     }
 }

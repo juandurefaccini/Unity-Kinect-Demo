@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class BlockCreationPanel : MonoBehaviour
 {
-    private AnimationCompositionController.Block _block;
-    public AnimationCompositionController AnimationCompositionController;
+    private AnimationComposer.Block _block;
+    public AnimationComposer AnimationComposer;
 
     private ArrayList layers_trigger = new ArrayList(){"","",""};
 
@@ -21,7 +21,7 @@ public class BlockCreationPanel : MonoBehaviour
     {
         if (_block is null)
         {
-            _block = new AnimationCompositionController.Block();
+            _block = new AnimationComposer.Block();
         }
         Debug.Log("Layer: "+layer);
         layers_trigger[layer] = trigger;        
@@ -31,14 +31,14 @@ public class BlockCreationPanel : MonoBehaviour
     {
         foreach (string layerinfo in layers_trigger)
         {
-            _block.AddLayerInfo(new AnimationCompositionController.LayerInfo(layerinfo));
+            _block.AddLayerInfo(new AnimationComposer.LayerInfo(layerinfo));
         }
-        AnimationCompositionController.AddBlock(_block);
+        AnimationComposer.AddBlock(_block);
         _block = null;
     }
 
     public void StartBlockQueue()
     {
-        AnimationCompositionController.StartAnimations();
+        AnimationComposer.StartAnimations();
     }
 }
