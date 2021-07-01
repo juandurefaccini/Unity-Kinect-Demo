@@ -15,7 +15,7 @@ public class AnimationCompositionController : MonoBehaviour
 
     }
 
-    private class Block
+    public class Block
     {
         // Clase encargada de almacenar los distintos cambios que se le haran a los layers
         private List <LayerInfo> stateTransitions;
@@ -26,11 +26,21 @@ public class AnimationCompositionController : MonoBehaviour
             this.stateTransitions = stateTransitions;
         }
 
+        public Block()
+        {
+            this.stateTransitions = new List<LayerInfo>();
+        }
+
         // Diccionario para almacenar el layer a editar y el valor del mismo
 
         public List <LayerInfo> GetLayerInfos()
         {
             return stateTransitions;
+        }
+
+        public void AddLayerInfo(LayerInfo layerInfo)
+        {
+            stateTransitions.Add(layerInfo);
         }
     }
 
@@ -88,18 +98,18 @@ public class AnimationCompositionController : MonoBehaviour
     }
 
     // Aca podria ir un observer con el animator
-    private void Update()
-    {
-        if (!_blockQueue.IsEmpty())
-        {
-            if (currentReadyStates == totalReadyStates)
-            {
-                Debug.Log("imheremyfellas"); //gets here immediately, should be a few seconds
-                Block currentBlock = _blockQueue.Dequeue();
-                ExecuteAnimationBlock(currentBlock);
-            }
-        }
-    }
+    // private void Update()
+    // {
+    //     if (!_blockQueue.IsEmpty())
+    //     {
+    //         if (currentReadyStates == totalReadyStates)
+    //         {
+    //             Debug.Log("imheremyfellas"); //gets here immediately, should be a few seconds
+    //             Block currentBlock = _blockQueue.Dequeue();
+    //             ExecuteAnimationBlock(currentBlock);
+    //         }
+    //     }
+    // }
 
     private void ExecuteAnimationBlock(Block block)
     {
@@ -108,6 +118,26 @@ public class AnimationCompositionController : MonoBehaviour
         {
             animatorController.SetTrigger(layerInfo.destinyState); // Lo ejecuto
             currentReadyStates--;
+        }
+    }
+
+    public void AddBlock(Block block)
+    {
+        _blockQueue.Enqueue(block);
+    }
+
+    public void StartAnimations()
+    {
+        Debug.Log("Aca arrancaria la animacion");
+        while (!_blockQueue.IsEmpty())
+        {
+            Debug.Log("A");
+            if (currentReadyStates == totalReadyStates)
+            {
+                Debug.Log("imheremyfellas"); //gets here immediately, should be a few seconds
+                Block currentBlock = _blockQueue.Dequeue();
+                ExecuteAnimationBlock(currentBlock);
+            }
         }
     }
 }
