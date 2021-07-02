@@ -71,7 +71,7 @@ public class AnimationCompositionController : MonoBehaviour
         var readyBehaviours = animatorController.GetBehaviours<ReadyBehaviour>();
         foreach (var behaviour in readyBehaviours)
         {
-            behaviour.CompositionController = this;
+            // behaviour.CompositionController = this;
         }
         
         List <LayerInfo> d1 = new List <LayerInfo>();
