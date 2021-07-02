@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BlockCreationPanel : MonoBehaviour
 {
-    private AnimationComposer.Block _block;
+    private Block _block;
     public AnimationComposer AnimationComposer;
 
     private ArrayList layers_trigger = new ArrayList(){"","",""};
@@ -21,7 +21,7 @@ public class BlockCreationPanel : MonoBehaviour
     {
         if (_block is null)
         {
-            _block = new AnimationComposer.Block();
+            _block = new Block();
         }
         Debug.Log("Layer: "+layer);
         layers_trigger[layer] = trigger;        
@@ -31,7 +31,7 @@ public class BlockCreationPanel : MonoBehaviour
     {
         foreach (string layerinfo in layers_trigger)
         {
-            _block.AddLayerInfo(new AnimationComposer.LayerInfo(layerinfo));
+            _block.AddLayerInfo(new LayerInfo(layerinfo));
         }
         AnimationComposer.AddBlock(_block);
         _block = null;

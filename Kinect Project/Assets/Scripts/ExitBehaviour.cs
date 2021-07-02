@@ -1,20 +1,21 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ExitBehaviour : StateMachineBehaviour
 {
-    private bool notified = false;
+    private bool _notified;
     
-    public AnimationComposer CompositionController;
+    public AnimationComposer compositionController;
+
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        _notified = false;
+    }
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (stateInfo.normalizedTime % 1 > 0.99 && !notified)
+        if (stateInfo.normalizedTime % 1 > 0.99 && !_notified)
         {
-            Debug.Log("resta1");
-            CompositionController.SignalAnimationComplete();
-            notified = true; //para que pregunte una sola vez
+            compositionController.SignalAnimationComplete();
+            _notified = true; //para que pregunte una sola vez
         }
     }
 }

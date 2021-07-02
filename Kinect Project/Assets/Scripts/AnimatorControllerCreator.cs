@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.Animations;
+using UnityEngine.Serialization;
 
 public class AnimatorControllerCreator : MonoBehaviour
 {
-    [Serializable] public struct stateDefinition
+    [Serializable] public struct StateDefinition
     {
         public string stateName;
         public Motion stateAnimation;
@@ -16,7 +17,7 @@ public class AnimatorControllerCreator : MonoBehaviour
     [Serializable] public struct LayerDefinition
     {
         public string layerName;
-        public stateDefinition[] _stateDefinitions;
+        public StateDefinition[] stateDefinitions;
         public AvatarMask mask;
 
     }
@@ -31,12 +32,12 @@ public class AnimatorControllerCreator : MonoBehaviour
     void CreateController()
     {
         var controller =
-            UnityEditor.Animations.AnimatorController.CreateAnimatorControllerAtPath(
+            AnimatorController.CreateAnimatorControllerAtPath(
                 ("Assets/" + controllerName + ".controller"));
         
         //capa base
-        var defaultState = controller.layers[0].stateMachine.AddState(layers[0]._stateDefinitions[0].stateName);
-        defaultState.motion = layers[0]._stateDefinitions[0].stateAnimation;
+        var defaultState = controller.layers[0].stateMachine.AddState(layers[0].stateDefinitions[0].stateName);
+        defaultState.motion = layers[0].stateDefinitions[0].stateAnimation;
         controller.layers[0].stateMachine.defaultState = defaultState;
         
         //otras capas
@@ -62,7 +63,7 @@ public class AnimatorControllerCreator : MonoBehaviour
             controller.AddParameter(clearLayerAnimationParameter, AnimatorControllerParameterType.Trigger);
             clearTransition.AddCondition(AnimatorConditionMode.If, 0, clearLayerAnimationParameter);
 
-            foreach (var stateDefinition in currentLayerDef._stateDefinitions)
+            foreach (var stateDefinition in currentLayerDef.stateDefinitions)
             {
                 //el parametro para ir de ready al nuevo estado
                 controller.AddParameter(stateDefinition.parameterName, AnimatorControllerParameterType.Trigger);

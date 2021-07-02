@@ -3834,13 +3834,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layers:
   - layerName: BaseLayer
-    _stateDefinitions:
+    stateDefinitions:
     - stateName: stateIdle
       stateAnimation: {fileID: 7400000, guid: d7ab4d0d34da579449006e6c8e64210c, type: 2}
       parameterName: 
     mask: {fileID: 0}
   - layerName: TorsoLayer
-    _stateDefinitions:
+    stateDefinitions:
     - stateName: stateRotTorsoL
       stateAnimation: {fileID: 7400000, guid: 5040eba905cea4247b618dc3d17d1cdd, type: 2}
       parameterName: RotTorsoL
@@ -3852,7 +3852,7 @@ MonoBehaviour:
       parameterName: Sad
     mask: {fileID: 31900000, guid: 067cbc6a989c94f4db211daef77174db, type: 2}
   - layerName: BothArmsLayer
-    _stateDefinitions:
+    stateDefinitions:
     - stateName: stateCrossArms
       stateAnimation: {fileID: 7400000, guid: e110927a411b46641afa54c9c1b7297c, type: 2}
       parameterName: CrossArms
@@ -3864,7 +3864,7 @@ MonoBehaviour:
       parameterName: FistPump
     mask: {fileID: 31900000, guid: 8f57a71956c04404bb6a4bb419f6c50a, type: 2}
   - layerName: LeftArmLayer
-    _stateDefinitions:
+    stateDefinitions:
     - stateName: stateRaiseArmL
       stateAnimation: {fileID: 7400000, guid: e572f994fc2fed448b49d8333e66301e, type: 2}
       parameterName: RaiseArmL
@@ -3873,7 +3873,7 @@ MonoBehaviour:
       parameterName: ScratchHeadL
     mask: {fileID: 31900000, guid: c35b85c7471ebfa439a2883f92b94271, type: 2}
   - layerName: RightArmLayer
-    _stateDefinitions:
+    stateDefinitions:
     - stateName: stateHandWave
       stateAnimation: {fileID: 7400000, guid: 45284095fc1178146ac43503c4e539ae, type: 2}
       parameterName: HandWave
@@ -3888,7 +3888,7 @@ MonoBehaviour:
       parameterName: ThumbsUp
     mask: {fileID: 31900000, guid: 7f9031c187e8af542aaa2db206bc4256, type: 2}
   - layerName: LegsLayer
-    _stateDefinitions:
+    stateDefinitions:
     - stateName: stateJump
       stateAnimation: {fileID: 7400000, guid: a2e2c9f57cf489c478642ec0e7b189a0, type: 2}
       parameterName: Jump
@@ -3933,7 +3933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1047732032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4169,7 +4169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1146332563
 Transform:
   m_ObjectHideFlags: 0
@@ -5718,7 +5718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1653326897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7157,6 +7157,96 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -870823317777057635, guid: 7f9653cc73c49d74192347ee2bb8dfa1, type: 3}
   m_PrefabInstance: {fileID: 904946646}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1960072775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1960072779}
+  - component: {fileID: 1960072778}
+  - component: {fileID: 1960072777}
+  - component: {fileID: 1960072776}
+  - component: {fileID: 1960072780}
+  m_Layer: 0
+  m_Name: RuletaAnimaciones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1960072776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960072775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ede7a7baf7b3f943b22475f0d7d4c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  play: 0
+  personajeAAnimar: {fileID: 68015134}
+--- !u!114 &1960072777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960072775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce8309b417ff2d4897ed3c5459acffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  play: 0
+  personajeAAnimar: {fileID: 68015134}
+--- !u!114 &1960072778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960072775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703ffe74cacb836488b14debc2762cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  play: 0
+  personajeAAnimar: {fileID: 68015134}
+--- !u!4 &1960072779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960072775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.07961936, y: 0.68247086, z: -0.8731892}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1960072780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960072775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57ab5f000485aa46bc7ff9e5eeb73f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  play: 0
+  personajeAAnimar: {fileID: 68015134}
 --- !u!1 &1967356382
 GameObject:
   m_ObjectHideFlags: 0
