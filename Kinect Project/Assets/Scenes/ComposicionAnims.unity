@@ -3859,6 +3859,9 @@ MonoBehaviour:
     - stateName: stateGrabHead
       stateAnimation: {fileID: 7400000, guid: dd242cd7ceb081e4dad13c2b16145888, type: 2}
       parameterName: GrabHead
+    - stateName: stateFistPump
+      stateAnimation: {fileID: 7400000, guid: 2a37cbfc99f627f4f84153cb37d47a5a, type: 2}
+      parameterName: FistPump
     mask: {fileID: 31900000, guid: 8f57a71956c04404bb6a4bb419f6c50a, type: 2}
   - layerName: LeftArmLayer
     _stateDefinitions:
