@@ -12,7 +12,8 @@ public class ExitBehaviour : StateMachineBehaviour
     {
         if (stateInfo.normalizedTime % 1 > 0.99 && !notified)
         {
-            CompositionController.signalAnimationComplete();
+            Debug.Log("resta1");
+            CompositionController.SignalAnimationComplete();
             notified = true; //para que pregunte una sola vez
         }
     }

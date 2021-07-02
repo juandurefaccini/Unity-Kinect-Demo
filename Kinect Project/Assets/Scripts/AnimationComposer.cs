@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimationComposer : MonoBehaviour
 {
     private int animsInProgress = 0;
+    private bool started;
     public class LayerInfo
     {
         public string destinyState { get; }
@@ -73,7 +74,7 @@ public class AnimationComposer : MonoBehaviour
         {
             behaviour.CompositionController = this;
         }
-
+        
         //ANGRY-START
         List <LayerInfo> d1 = new List <LayerInfo>();
         d1.Add(new LayerInfo("CrossArms"));
@@ -88,6 +89,7 @@ public class AnimationComposer : MonoBehaviour
         d3.Add(new LayerInfo("clearLegsLayer"));
         d3.Add(new LayerInfo("clearTorsoLayer"));
         d3.Add(new LayerInfo("clearLeftArmLayer"));
+        d3.Add(new LayerInfo("clearBothArmsLayer"));
 
         Block b1 = new Block(d1);
         Block b2 = new Block(d2);
@@ -101,11 +103,16 @@ public class AnimationComposer : MonoBehaviour
         //HAPPY-START
         List <LayerInfo> d4 = new List <LayerInfo>();
         d4.Add(new LayerInfo("Jump"));
-        //d4.Add(new LayerInfo("RaiseArmsOverHead"));
+        d4.Add(new LayerInfo("FistPump"));
         _blockQueue.Enqueue(new Block(d4));
         List <LayerInfo> d5 = new List <LayerInfo>();
+        d5.Add(new LayerInfo("clearBothArmsLayer"));
         d5.Add(new LayerInfo("ThumbsUp"));
         _blockQueue.Enqueue(new Block(d5));
+        List <LayerInfo> dc = new List <LayerInfo>();
+        dc.Add(new LayerInfo("clearLegsLayer"));
+        dc.Add(new LayerInfo("clearRightArmLayer"));
+        _blockQueue.Enqueue(new Block(dc));
         //HAPPY-END
         
         //SAD-START
@@ -113,17 +120,26 @@ public class AnimationComposer : MonoBehaviour
         d6.Add(new LayerInfo("Sad"));
         d6.Add(new LayerInfo("GrabHead"));
         _blockQueue.Enqueue(new Block(d6));
+        List <LayerInfo> d7 = new List <LayerInfo>();
+        d7.Add(new LayerInfo("clearTorsoLayer"));
+        d7.Add(new LayerInfo("clearBothArmsLayer"));
+        _blockQueue.Enqueue(new Block(d7));
         //SAD-END
+        
+        StartAnimations();
     }
 
-    // private void Update()
-    // {
-    //     if (!_blockQueue.IsEmpty() && animsInProgress == 0)
-    //     {
-    //         Block currentBlock = _blockQueue.Dequeue();
-    //         ExecuteAnimationBlock(currentBlock);
-    //     }
-    // }
+    private void Update()
+    {
+        if (!started)
+            return;
+
+        if (!_blockQueue.IsEmpty() && animsInProgress == 0)
+        {
+            Block currentBlock = _blockQueue.Dequeue();
+            ExecuteAnimationBlock(currentBlock);
+        }
+    }
 
     private void ExecuteAnimationBlock(Block block)
     {
@@ -139,9 +155,10 @@ public class AnimationComposer : MonoBehaviour
         }
     }
     
-    public void signalAnimationComplete()
+    public void SignalAnimationComplete()
     {
         animsInProgress--;
+        Debug.Log(animsInProgress);
     }
 
     public void AddBlock(Block block)
@@ -151,14 +168,6 @@ public class AnimationComposer : MonoBehaviour
 
     public void StartAnimations()
     {
-        Debug.Log("Aca arrancaria la animacion");
-        while (!_blockQueue.IsEmpty())
-        {
-            if (animsInProgress == 0)
-            {
-                Block currentBlock = _blockQueue.Dequeue();
-                ExecuteAnimationBlock(currentBlock);
-            }
-        }
+        started = true;
     }
 }
