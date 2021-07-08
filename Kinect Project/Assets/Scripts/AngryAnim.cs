@@ -31,7 +31,6 @@ public class AngryAnim : MonoBehaviour
         
         List <LayerInfo> d2 = new List <LayerInfo>();
         
-        d2.Add(new LayerInfo("clearBothArmsLayer"));
         d2.Add(new LayerInfo("clearTorsoLayer")); 
         d2.Add(new LayerInfo("clearRightArmLayer"));
         d2.Add(new LayerInfo("Stomp")); 
