@@ -1,0 +1,229 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.9f1 (108be757e447) revision 1084391'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1165; Version 2009; 64bit' Language: 'en' Physical Memory: 16331 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+A:\Unity Editors\2020.3.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+A:/jerem/Desktop/GitHubUnity/Unity-Kinect-Demo/Kinect Project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+53757
+Successfully changed project path to: A:/jerem/Desktop/GitHubUnity/Unity-Kinect-Demo/Kinect Project
+A:/jerem/Desktop/GitHubUnity/Unity-Kinect-Demo/Kinect Project
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 32.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.9f1 (108be757e447)
+[Subsystems] Discovering subsystems at path A:/Unity Editors/2020.3.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path A:/jerem/Desktop/GitHubUnity/Unity-Kinect-Demo/Kinect Project/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
+    Vendor:   
+    VRAM:     5991 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'A:/Unity Editors/2020.3.9f1/Editor/Data/Managed'
+Mono path[1] = 'A:/Unity Editors/2020.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'A:/Unity Editors/2020.3.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56132
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: A:/Unity Editors/2020.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003314 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 31.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.097 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001745 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.286 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1798 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.2 MB.
+System memory in use after: 87.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2239.
+Total: 1.969100 ms (FindLiveObjects: 0.222700 ms CreateObjectMapping: 0.114100 ms MarkObjects: 1.565900 ms  DeleteObjects: 0.065300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Girl002.prefab
+  artifactKey: Guid(995a80bcd971bc049965c120718ac4b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Girl002.prefab using Guid(995a80bcd971bc049965c120718ac4b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c41d626dcbe59f35057e3792bcf6723b') in 0.248986 seconds
+  Import took 0.292068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.438557 seconds.
+  path: Assets/Resources/Animation/STAnimsGenericas/STAnims 1.controller
+  artifactKey: Guid(d4a0be772b671684b8ceb297f0edc5da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animation/STAnimsGenericas/STAnims 1.controller using Guid(d4a0be772b671684b8ceb297f0edc5da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd267759944cf3b7fd732726c56b8f4d') in 3.464545 seconds
+  Import took 3.469735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.429923 seconds.
+  path: Assets/Resources/Animation/STAnimsGenericas/Animator.controller
+  artifactKey: Guid(d4a0be772b671684b8ceb297f0edc5da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animation/STAnimsGenericas/Animator.controller using Guid(d4a0be772b671684b8ceb297f0edc5da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff8ac3f8f03f627fa901c77bfc619472') in 3.430461 seconds
+  Import took 3.444080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Resources/Animation/STAnimsGenericas/tetona-head-grab.anim
+  artifactKey: Guid(b492a6b8b3a46cf4d89156b451171c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animation/STAnimsGenericas/tetona-head-grab.anim using Guid(b492a6b8b3a46cf4d89156b451171c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd45270a3a1293f980e8e5c8e991c57fd') in 0.595987 seconds
+  Import took 0.620505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/Resources/Animation/STAnimsGenericas/tetona-raise-left-arm-90.anim
+  artifactKey: Guid(7eb145c4f7ee1ea4d80b79b1e5d66144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animation/STAnimsGenericas/tetona-raise-left-arm-90.anim using Guid(7eb145c4f7ee1ea4d80b79b1e5d66144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d97481873dc74888cb8f75b26056212') in 0.481855 seconds
+  Import took 0.500437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.201963 seconds.
+  path: Assets/Resources/Animation/STAnimsGenericas/tetona-raise-right-arm-90.anim
+  artifactKey: Guid(300768d60d79abe449ab345e5045dcef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animation/STAnimsGenericas/tetona-raise-right-arm-90.anim using Guid(300768d60d79abe449ab345e5045dcef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e63623b1e7f7d55b2fbcc3dfef4166') in 0.557070 seconds
+  Import took 0.567824 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.047998 seconds.
+  path: Assets/Resources/Animation/STAnimsGenericas/tetona-rotate-torso-right.anim
+  artifactKey: Guid(ff65369a8d73d3e4c9d28a25c259df31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animation/STAnimsGenericas/tetona-rotate-torso-right.anim using Guid(ff65369a8d73d3e4c9d28a25c259df31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d671d462ff574e84db4ff2e5c92190b') in 0.576786 seconds
+  Import took 0.596876 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.767464 seconds.
+  path: Assets/Resources/Animation/STAnimsGenericas/tetona-scratch-head-left.anim
+  artifactKey: Guid(d250d966dd099774bbb2afbc55093aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animation/STAnimsGenericas/tetona-scratch-head-left.anim using Guid(d250d966dd099774bbb2afbc55093aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca6169a076213a981a58a677e8397039') in 0.612674 seconds
+  Import took 0.633655 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.383851 seconds.
+  path: Assets/Resources/Animation/STAnimsGenericas/tetona-scratch-head-right.anim
+  artifactKey: Guid(dbfae55367d1cf64b8b108a6d047221b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animation/STAnimsGenericas/tetona-scratch-head-right.anim using Guid(dbfae55367d1cf64b8b108a6d047221b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9a2c91865ac6b79ed2e53b7540085fe') in 0.591681 seconds
+  Import took 0.620521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.261067 seconds.
+  path: Assets/Resources/Animation/STAnimsGenericas/tetona-arm-cross.anim
+  artifactKey: Guid(1a26dec2adfec3f4ab0a9335f5e64a9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animation/STAnimsGenericas/tetona-arm-cross.anim using Guid(1a26dec2adfec3f4ab0a9335f5e64a9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2429a37577a5b106eaed7f1dced600b0') in 0.562997 seconds
+  Import took 0.573994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.296516 seconds.
+  path: Assets/Resources/Animation/STAnimsGenericas/tetona-hand-wave.anim
+  artifactKey: Guid(a5c64a21001776b4397fc8e46ef685a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animation/STAnimsGenericas/tetona-hand-wave.anim using Guid(a5c64a21001776b4397fc8e46ef685a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e37914f7cda9227af183e74b326fc4f') in 0.504084 seconds
+  Import took 0.520733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.245016 seconds.
+  path: Assets/Resources/Animation/STAnimsGenericas/tetona-rotate-torso-left.anim
+  artifactKey: Guid(4bc75e6d1efeeda49a5857ac10f205a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animation/STAnimsGenericas/tetona-rotate-torso-left.anim using Guid(4bc75e6d1efeeda49a5857ac10f205a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06f7f3b5380d32137e10465172f2a6be') in 0.636856 seconds
+  Import took 0.652022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.734649 seconds.
+  path: Assets/Resources/Animation/Kinect/crucebrazos 1.anim
+  artifactKey: Guid(95a90b35dec7bd44980c18e10c2bfedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animation/Kinect/crucebrazos 1.anim using Guid(95a90b35dec7bd44980c18e10c2bfedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6415b66aec33d93d8b94f28dc785a4e7') in 0.545898 seconds
+  Import took 0.555219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.428960 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Sunny Days.mat
+  artifactKey: Guid(6522f30e342599e4e9dd4cc2cc03c830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Sunny Days.mat using Guid(6522f30e342599e4e9dd4cc2cc03c830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b4b3bb17d81f844cc1bc83169a9697a') in 0.311564 seconds
+  Import took 0.331469 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Textures/Sunny Days - Seamless.jpg
+  artifactKey: Guid(17c350171f7a3ca479f830547c66d187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Textures/Sunny Days - Seamless.jpg using Guid(17c350171f7a3ca479f830547c66d187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89c249df4ab4459815cca09e9fb29be6') in 0.155037 seconds
+  Import took 0.172411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Color Gradient Presets/Light to Dark Green - Vertical.asset
+  artifactKey: Guid(5cf8ae092ca54931b443bec5148f3c59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Color Gradient Presets/Light to Dark Green - Vertical.asset using Guid(5cf8ae092ca54931b443bec5148f3c59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abb49a6c8b6a871e83bb1fb867fd9c02') in 0.007236 seconds
+  Import took 0.018985 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Color Gradient Presets/Dark to Light Green - Vertical.asset
+  artifactKey: Guid(4c86a3366cd840348ebe8dc438570ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Color Gradient Presets/Dark to Light Green - Vertical.asset using Guid(4c86a3366cd840348ebe8dc438570ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ae211fe08bafc04a96ba902d33150e2') in 0.005929 seconds
+  Import took 0.011972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.977759 seconds.
+  path: Assets/Generic2Humanoid/tetona-dance.anim
+  artifactKey: Guid(bc25c7c50b1407649822b4478252c8b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Generic2Humanoid/tetona-dance.anim using Guid(bc25c7c50b1407649822b4478252c8b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c171a523692c85a05cdccb7862a427f6') in 0.107934 seconds
+  Import took 0.123499 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 110.973207 seconds.
+  path: Assets/Girl002.prefab
+  artifactKey: Guid(995a80bcd971bc049965c120718ac4b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Girl002.prefab using Guid(995a80bcd971bc049965c120718ac4b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05a41061c094eb8091fd218f13daf948') in 0.019312 seconds
+  Import took 0.049991 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 98.447151 seconds.
+  path: Assets/ScrumTalk/Imported Models/Modern People/Models/Girls/Models/Girl002Avatar.asset
+  artifactKey: Guid(172a8e68229016e4aba6250a2da452ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScrumTalk/Imported Models/Modern People/Models/Girls/Models/Girl002Avatar.asset using Guid(172a8e68229016e4aba6250a2da452ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17cbe870c60f8236e6cf8277e4cb4547') in 0.007588 seconds
+  Import took 0.010585 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
