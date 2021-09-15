@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: b68260e4c572d6441877997f036e6272
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -5367720199529664395
+    second: Capture Rig|Action
+  - first:
+      74: -4951169134282376373
+    second: Capture Rig|COR_BendBack
+  - first:
+      74: -7747509508620582345
+    second: Capture Rig|COR_BendForward
+  - first:
+      74: -4668342015390799456
+    second: Capture Rig|COR_JawDown
+  - first:
+      74: 2025158151965025232
+    second: Capture Rig|COR_JawLeft
+  - first:
+      74: 6485770962705251639
+    second: Capture Rig|COR_JawRight
+  - first:
+      74: 2501785211290822366
+    second: Capture Rig|COR_JawUp
+  - first:
+      74: 9195519456293432479
+    second: Capture Rig|COR_TwistLeft
+  - first:
+      74: -9074997673169255380
+    second: Capture Rig|COR_TwistRight
+  - first:
+      74: 7128669918062563646
+    second: Capture Rig|HeadAction
+  - first:
+      74: 2105227688274631762
+    second: Capture Rig|IFingerBend.L
+  - first:
+      74: -4762449613494709165
+    second: Capture Rig|IFingerBend.R
+  - first:
+      74: -1867896458422674518
+    second: Capture Rig|JawOpen
+  - first:
+      74: -7579276263427273392
+    second: Capture Rig|Left_ElbowAction
+  - first:
+      74: -8301527214141947288
+    second: Capture Rig|Left_FootAction
+  - first:
+      74: 2923574567320267398
+    second: Capture Rig|Left_HandAction
+  - first:
+      74: -1924682205742871657
+    second: Capture Rig|Left_HipAction
+  - first:
+      74: -6413016720300135796
+    second: Capture Rig|Left_KneeAction
+  - first:
+      74: -5770655440261661369
+    second: Capture Rig|Left_ShoulderAction
+  - first:
+      74: -5929773599458297042
+    second: Capture Rig|LowerLidUpDown.L
+  - first:
+      74: 5947258922386789337
+    second: Capture Rig|LowerLidUpDown.R
+  - first:
+      74: -4265069824645014662
+    second: Capture Rig|MFingerBend.L
+  - first:
+      74: -4902741044866081652
+    second: Capture Rig|MFingerBend.R
+  - first:
+      74: 790566926034122877
+    second: Capture Rig|MouthFrown
+  - first:
+      74: -958559421170369784
+    second: Capture Rig|MouthIn
+  - first:
+      74: -5824544233086798519
+    second: Capture Rig|MouthOut
+  - first:
+      74: 4466837514112346993
+    second: Capture Rig|MouthSmile
+  - first:
+      74: 3309664532421107165
+    second: Capture Rig|NeckAction
+  - first:
+      74: 7136253043341703442
+    second: Capture Rig|PFingerBend.L
+  - first:
+      74: 3278733001141181590
+    second: Capture Rig|PFingerBend.R
+  - first:
+      74: 195018972666991651
+    second: Capture Rig|Right_ElbowAction
+  - first:
+      74: -7308658482818664958
+    second: Capture Rig|Right_FootAction
+  - first:
+      74: 8132017599394708713
+    second: Capture Rig|Right_HandAction
+  - first:
+      74: -3262585621967157340
+    second: Capture Rig|Right_HipAction
+  - first:
+      74: -405790268729650139
+    second: Capture Rig|Right_KneeAction
+  - first:
+      74: -3722513293059846637
+    second: Capture Rig|Right_ShoulderAction
+  - first:
+      74: 1685339163608194787
+    second: Capture Rig|test
+  - first:
+      74: -5378982846760731288
+    second: Capture Rig|ThumbBend.L
+  - first:
+      74: 5505016233865281470
+    second: Capture Rig|ThumbBend.R
+  - first:
+      74: 8019175967371156156
+    second: Capture Rig|TorsoAction
+  - first:
+      74: 65620656397297798
+    second: Capture Rig|UpperLidUpDown.L
+  - first:
+      74: 1353063307610285370
+    second: Capture Rig|UpperLidUpDown.R
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
