@@ -1,14 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MegaEnojadoAnim : MonoBehaviour
+public class LikeABossAnim : InterfazAnim
 {
-    public bool play;
     private List<Block> anim = new List<Block>();
 
-    public GameObject personajeAAnimar;
-
     private AnimationComposer _composer;
+    public override void playAnim()
+    {
+        play = true;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +31,9 @@ public class MegaEnojadoAnim : MonoBehaviour
          "clearRightArmLayer", "HandWave", "RaiseArmR", "ScratchHeadR", "ThumbsUp"
          "clearLegsLayer", "Jump", "Stomp" */
         
-        CreateBlock(new List<string>(){"GrabHead"});
-        CreateBlock(new List<string>(){"Stomp"});
-        CreateBlock(new List<string>(){"ScratchHeadR"});
-        CreateBlock(new List<string>(){"clearRightArmLayer"});
+        CreateBlock(new List<string>(){"FistPump"});
         CreateBlock(new List<string>(){"CrossArms"});
-        CreateBlock(new List<string>(){"Stomp"});
+        CreateBlock(new List<string>(){"GrabHead", "ThumbsUp"});
         CreateBlock(new List<string>(){"clearLegsLayer", "clearTorsoLayer", "clearRightArmLayer", "clearLeftArmLayer", "clearBothArmsLayer"});
     }
 
@@ -55,7 +53,7 @@ public class MegaEnojadoAnim : MonoBehaviour
         
         play = false;
     }
-    
+
     void CreateBlock(List<string> destinyStates)
     {
         List<LayerInfo> layers = new List<LayerInfo>();

@@ -1,12 +1,13 @@
 using UnityEngine;
 
-public class ClearAnimations : MonoBehaviour
+public class ClearAnimations : InterfazAnim
 {
-    public bool play;
-
-    public GameObject personajeAAnimar;
 
     private AnimationComposer _composer;
+    public override void playAnim()
+    {
+        play = true;
+    }
     // Start is called before the first frame update
     void Start()
     {

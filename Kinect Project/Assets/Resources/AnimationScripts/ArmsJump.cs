@@ -1,58 +1,66 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AgusAnim : MonoBehaviour
+
+public class ArmsJump : InterfazAnim
 {
-    public bool play;
     private List<Block> anim = new List<Block>();
-
-    public GameObject personajeAAnimar;
-
+        
     private AnimationComposer _composer;
+
+    public override void playAnim()
+    {
+        play = true;
+    }
     // Start is called before the first frame update
     void Start()
     {
         _composer = personajeAAnimar.GetComponent<AnimationComposer>();
-        
+
         //resetear las extremidades que hayan quedado animadas
         List<LayerInfo> clear = new List<LayerInfo>();
         var animator = personajeAAnimar.GetComponent<Animator>();
         for (int l = 1; l < animator.layerCount; l++)
         {
-            clear.Add(new LayerInfo("clear"+animator.GetLayerName(l)));
+            clear.Add(new LayerInfo("clear" + animator.GetLayerName(l)));
         }
         Block clearBlock = new Block(clear);
         anim.Add(clearBlock);
-        
-        //AgusAnim-START
-        List <LayerInfo> d4 = new List <LayerInfo>();
-        d4.Add(new LayerInfo("Jump"));
-        anim.Add(new Block(d4));
-        
-        List <LayerInfo> d5 = new List <LayerInfo>();
-        d5.Add(new LayerInfo("clearBothArmsLayer"));
-        d5.Add(new LayerInfo("RaiseArmR"));
-        anim.Add(new Block(d5));
 
+        //OTHER-START
+        //Lista 7 reservada para los clears mas abajo
         List<LayerInfo> d6 = new List<LayerInfo>();
-        d6.Add(new LayerInfo("RaiseArmL"));
-        anim.Add(new Block(d6));
+        List<LayerInfo> d8 = new List<LayerInfo>();
+        List<LayerInfo> d9 = new List<LayerInfo>();
+        List<LayerInfo> d10 = new List<LayerInfo>();
+        List<LayerInfo> d11 = new List<LayerInfo>();
 
-        anim.Add(new Block(d4));
+        d6.Add(new LayerInfo("RaiseArmR"));
+        anim.Add(new Block(d6));
         
-        List <LayerInfo> d7 = new List <LayerInfo>();
-        d7.Add(new LayerInfo("clearLegsLayer"));
-        d7.Add(new LayerInfo("clearRightArmLayer"));
-        d7.Add(new LayerInfo("clearRightArmLayer"));
-        anim.Add(new Block(d7));
-        
-        List <LayerInfo> d8 = new List <LayerInfo>();
-        d8.Add(new LayerInfo("clearLegsLayer"));
-        d8.Add(new LayerInfo("clearLeftArmLayer"));
-        d8.Add(new LayerInfo("clearLeftArmLayer"));
+        d8.Add(new LayerInfo("clearRightArmLayer"));
         anim.Add(new Block(d8));
+
+        d9.Add(new LayerInfo("RaiseArmL"));
+        anim.Add(new Block(d9));
+
         
-        //AgusAnim-END
+        d10.Add(new LayerInfo("clearLeftArmLayer"));
+        anim.Add(new Block(d10));
+        
+        d11.Add(new LayerInfo("Jump"));
+        anim.Add(new Block(d11));
+
+
+
+        List<LayerInfo> d7 = new List<LayerInfo>();
+        d7.Add(new LayerInfo("clearTorsoLayer"));
+        d7.Add(new LayerInfo("clearLeftArmLayer"));
+        d7.Add(new LayerInfo("clearRightArmLayer"));
+        d7.Add(new LayerInfo("clearBothArmsLayer"));    
+        anim.Add(new Block(d7));
+        //OTHER-END
     }
 
     // Update is called once per frame
@@ -68,7 +76,7 @@ public class AgusAnim : MonoBehaviour
         {
             _composer.AddBlock(block);
         }
-        
+
         play = false;
     }
 }

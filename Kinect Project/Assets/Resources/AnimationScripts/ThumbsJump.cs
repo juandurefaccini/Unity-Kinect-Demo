@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SadAnimInterfaz : InterfazAnim
+
+public class ThumbsJump : InterfazAnim
 {
     private List<Block> anim = new List<Block>();
+       
     private AnimationComposer _composer;
 
     public override void playAnim()
     {
         play = true;
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,16 +29,35 @@ public class SadAnimInterfaz : InterfazAnim
         Block clearBlock = new Block(clear);
         anim.Add(clearBlock);
 
-        //SAD-START
+        //OTHER-START
+        //Lista 7 reservada para los clears mas abajo
         List<LayerInfo> d6 = new List<LayerInfo>();
-        d6.Add(new LayerInfo("Sad"));
-        d6.Add(new LayerInfo("GrabHead"));
+        List<LayerInfo> d8 = new List<LayerInfo>();
+        List<LayerInfo> d9 = new List<LayerInfo>();
+        //List<LayerInfo> d10 = new List<LayerInfo>();
+        //List<LayerInfo> d11 = new List<LayerInfo>();
+
+        d6.Add(new LayerInfo("ThumbsUp"));
         anim.Add(new Block(d6));
+        
+        d8.Add(new LayerInfo("clearBothArmsLayer"));
+        anim.Add(new Block(d8));
+
+        d9.Add(new LayerInfo("Jump"));
+        anim.Add(new Block(d9));
+
+        
+        //d10.Add(new LayerInfo("clearLeftArmLayer"));
+        //anim.Add(new Block(d10));
+        
+
         List<LayerInfo> d7 = new List<LayerInfo>();
         d7.Add(new LayerInfo("clearTorsoLayer"));
-        d7.Add(new LayerInfo("clearBothArmsLayer"));
+        d7.Add(new LayerInfo("clearLeftArmLayer"));
+        d7.Add(new LayerInfo("clearRightArmLayer"));
+        d7.Add(new LayerInfo("clearBothArmsLayer"));    
         anim.Add(new Block(d7));
-        //SAD-END
+        //OTHER-END
     }
 
     // Update is called once per frame
@@ -55,4 +77,3 @@ public class SadAnimInterfaz : InterfazAnim
         play = false;
     }
 }
-

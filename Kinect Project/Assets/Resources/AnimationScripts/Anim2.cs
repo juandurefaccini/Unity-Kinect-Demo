@@ -1,14 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Anim1 : MonoBehaviour
+public class Anim2 : InterfazAnim
 {
-    public bool play;
     private List<Block> anim = new List<Block>();
 
-    public GameObject personajeAAnimar;
-
     private AnimationComposer _composer;
+
+    public override void playAnim()
+    {
+        play = true;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -24,26 +26,21 @@ public class Anim1 : MonoBehaviour
         Block clearBlock = new Block(clear);
         anim.Add(clearBlock);
         
-        //SAD-START
+        //START
         List <LayerInfo> d6 = new List <LayerInfo>();
-        d6.Add(new LayerInfo("Jump"));
+        d6.Add(new LayerInfo("RotTorsoL"));
         anim.Add(new Block(d6));
-        List <LayerInfo> d5 = new List <LayerInfo>();
-        d5.Add(new LayerInfo("Jump"));
-        anim.Add(new Block(d5));
         List <LayerInfo> d7 = new List <LayerInfo>();
-        d7.Add(new LayerInfo("ThumbsUp"));
-        d7.Add(new LayerInfo("Jump"));
+        d7.Add(new LayerInfo("RotTorsoR"));
         anim.Add(new Block(d7));
         List <LayerInfo> d8 = new List <LayerInfo>();
-        d8.Add(new LayerInfo("RaiseArmL"));
-        d8.Add(new LayerInfo("RaiseArmR"));
+        d8.Add(new LayerInfo("ScratchHeadR"));
         anim.Add(new Block(d8));
         List <LayerInfo> d9 = new List <LayerInfo>();
         d9.Add(new LayerInfo("clearTorsoLayer"));
         d9.Add(new LayerInfo("clearBothArmsLayer"));
         d9.Add(new LayerInfo("clearLegsLayer"));
-        //SAD-END
+        //END
     }
 
     // Update is called once per frame

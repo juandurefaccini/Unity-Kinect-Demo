@@ -1,14 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HappyAnim : MonoBehaviour
+public class AngryAnim : InterfazAnim
 {
-    public bool play;
     private List<Block> anim = new List<Block>();
 
-    public GameObject personajeAAnimar;
-
     private AnimationComposer _composer;
+    
+    public override void playAnim()
+    {
+        play = true;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,22 +27,30 @@ public class HappyAnim : MonoBehaviour
         Block clearBlock = new Block(clear);
         anim.Add(clearBlock);
         
-        //HAPPY-START
-        List <LayerInfo> d4 = new List <LayerInfo>();
-        d4.Add(new LayerInfo("Jump"));
-        d4.Add(new LayerInfo("FistPump"));
-        anim.Add(new Block(d4));
+        //ANGRY-START
+        List <LayerInfo> d1 = new List <LayerInfo>();
+        d1.Add(new LayerInfo("CrossArms"));
         
-        List <LayerInfo> d5 = new List <LayerInfo>();
-        d5.Add(new LayerInfo("clearBothArmsLayer"));
-        d5.Add(new LayerInfo("ThumbsUp"));
-        anim.Add(new Block(d5));
+        List <LayerInfo> d2 = new List <LayerInfo>();
         
-        List <LayerInfo> dc = new List <LayerInfo>();
-        dc.Add(new LayerInfo("clearLegsLayer"));
-        dc.Add(new LayerInfo("clearRightArmLayer"));
-        anim.Add(new Block(dc));
-        //HAPPY-END
+        d2.Add(new LayerInfo("clearTorsoLayer")); 
+        d2.Add(new LayerInfo("clearRightArmLayer"));
+        d2.Add(new LayerInfo("Stomp")); 
+        
+        List <LayerInfo> d3 = new List <LayerInfo>();
+        d3.Add(new LayerInfo("clearLegsLayer"));
+        d3.Add(new LayerInfo("clearTorsoLayer"));
+        d3.Add(new LayerInfo("clearLeftArmLayer"));
+        d3.Add(new LayerInfo("clearBothArmsLayer"));
+
+        Block b1 = new Block(d1);
+        Block b2 = new Block(d2);
+        Block b3 = new Block(d3);
+
+        anim.Add(b1);
+        anim.Add(b2);
+        anim.Add(b3);
+        //ANGRY-END
     }
 
     // Update is called once per frame

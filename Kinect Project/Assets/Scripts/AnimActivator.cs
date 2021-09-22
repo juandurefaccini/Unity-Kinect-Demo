@@ -15,7 +15,7 @@ public class AnimActivator : MonoBehaviour
             if (component != this)
             {
                 anim_scripts[component.GetType().ToString()]=component;
-                Debug.Log("LA CLAVE ES: " + component.GetType().ToString());
+                //Debug.Log("LA CLAVE ES: " + component.GetType().ToString());
             }
         }
     }

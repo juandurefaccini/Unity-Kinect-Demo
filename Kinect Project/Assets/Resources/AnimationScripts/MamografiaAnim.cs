@@ -1,14 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MamografiaAnim : MonoBehaviour
+public class MamografiaAnim : InterfazAnim
 {
-    public bool play;
     private List<Block> anim = new List<Block>();
 
-    public GameObject personajeAAnimar;
-
     private AnimationComposer _composer;
+    public override void playAnim()
+    {
+        play = true;
+    }
     // Start is called before the first frame update
     void Start()
     {

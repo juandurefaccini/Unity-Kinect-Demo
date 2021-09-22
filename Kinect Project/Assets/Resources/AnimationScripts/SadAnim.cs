@@ -1,14 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LikeABossAnim : MonoBehaviour
+public class SadAnim : InterfazAnim
 {
-    public bool play;
     private List<Block> anim = new List<Block>();
 
-    public GameObject personajeAAnimar;
-
     private AnimationComposer _composer;
+    
+    public override void playAnim()
+    {
+        play = true;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,16 +27,16 @@ public class LikeABossAnim : MonoBehaviour
         Block clearBlock = new Block(clear);
         anim.Add(clearBlock);
         
-        /* "clearTorsoLayer", "RotTorsoL", "RotTorsoR", "Sad"
-         "clearBothArmsLayer", "CrossArms", "GrabHead", "FistPump"
-         "clearLeftArmLayer", "RaiseArmL", "ScratchHeadL"
-         "clearRightArmLayer", "HandWave", "RaiseArmR", "ScratchHeadR", "ThumbsUp"
-         "clearLegsLayer", "Jump", "Stomp" */
-        
-        CreateBlock(new List<string>(){"FistPump"});
-        CreateBlock(new List<string>(){"CrossArms"});
-        CreateBlock(new List<string>(){"GrabHead", "ThumbsUp"});
-        CreateBlock(new List<string>(){"clearLegsLayer", "clearTorsoLayer", "clearRightArmLayer", "clearLeftArmLayer", "clearBothArmsLayer"});
+        //SAD-START
+        List <LayerInfo> d6 = new List <LayerInfo>();
+        d6.Add(new LayerInfo("Sad"));
+        d6.Add(new LayerInfo("GrabHead"));
+        anim.Add(new Block(d6));
+        List <LayerInfo> d7 = new List <LayerInfo>();
+        d7.Add(new LayerInfo("clearTorsoLayer"));
+        d7.Add(new LayerInfo("clearBothArmsLayer"));
+        anim.Add(new Block(d7));
+        //SAD-END
     }
 
     // Update is called once per frame
@@ -51,18 +54,5 @@ public class LikeABossAnim : MonoBehaviour
         }
         
         play = false;
-    }
-
-    void CreateBlock(List<string> destinyStates)
-    {
-        List<LayerInfo> layers = new List<LayerInfo>();
-        
-        foreach (var state in destinyStates)
-        {
-            layers.Add(new LayerInfo(state));
-        }
-
-        Block block = new Block(layers);
-        anim.Add(block);
     }
 }

@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class RotateStomp : MonoBehaviour
+public class RotateStomp : InterfazAnim
 {
-    public bool play;
     private List<Block> anim = new List<Block>();
-        
-    public GameObject personajeAAnimar;
-
+      
     private AnimationComposer _composer;
     // Start is called before the first frame update
+    public override void playAnim()
+    {
+        play = true;
+    }
     void Start()
     {
         _composer = personajeAAnimar.GetComponent<AnimationComposer>();

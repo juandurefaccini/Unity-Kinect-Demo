@@ -1,20 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SadAnim : MonoBehaviour
+public class FiestaTropiezoAnim : InterfazAnim
 {
-    private bool play;
     private List<Block> anim = new List<Block>();
 
-    public GameObject personajeAAnimar;
-
     private AnimationComposer _composer;
-    
-    public void playAnim()
+    public override void playAnim()
     {
         play = true;
     }
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -30,20 +25,20 @@ public class SadAnim : MonoBehaviour
         Block clearBlock = new Block(clear);
         anim.Add(clearBlock);
         
-        //SAD-START
-        List <LayerInfo> d6 = new List <LayerInfo>();
-        d6.Add(new LayerInfo("Sad"));
-        d6.Add(new LayerInfo("GrabHead"));
-        anim.Add(new Block(d6));
-        List <LayerInfo> d7 = new List <LayerInfo>();
-        d7.Add(new LayerInfo("clearTorsoLayer"));
-        d7.Add(new LayerInfo("clearBothArmsLayer"));
-        anim.Add(new Block(d7));
-        //SAD-END
+        /* "clearTorsoLayer", "RotTorsoL", "RotTorsoR", "Sad"
+         "clearBothArmsLayer", "CrossArms", "GrabHead", "FistPump"
+         "clearLeftArmLayer", "RaiseArmL", "ScratchHeadL"
+         "clearRightArmLayer", "HandWave", "RaiseArmR", "ScratchHeadR", "ThumbsUp"
+         "clearLegsLayer", "Jump", "Stomp" */
+        
+        CreateBlock(new List<string>(){"ThumbsUp", "CrossArms", "Jump"});
+        CreateBlock(new List<string>(){"ThumbsUp", "Jump", "clearBothArmsLayer"});
+        CreateBlock(new List<string>() {"clearRightArmLayer", "Stomp"});
+        CreateBlock(new List<string>(){"clearLegsLayer", "clearTorsoLayer", "clearRightArmLayer", "clearLeftArmLayer", "clearBothArmsLayer"});
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()   
     {
         if (!play)
             return;
@@ -57,5 +52,18 @@ public class SadAnim : MonoBehaviour
         }
         
         play = false;
+    }
+    
+    void CreateBlock(List<string> destinyStates)
+    {
+        List<LayerInfo> layers = new List<LayerInfo>();
+        
+        foreach (var state in destinyStates)
+        {
+            layers.Add(new LayerInfo(state));
+        }
+
+        Block block = new Block(layers);
+        anim.Add(block);
     }
 }
