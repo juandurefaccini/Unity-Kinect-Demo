@@ -364,8 +364,12 @@ GameObject:
   - component: {fileID: 522480834}
   - component: {fileID: 522480835}
   - component: {fileID: 522480836}
+  - component: {fileID: 522480843}
+  - component: {fileID: 522480842}
   - component: {fileID: 522480839}
   - component: {fileID: 522480838}
+  - component: {fileID: 522480841}
+  - component: {fileID: 522480840}
   - component: {fileID: 522480837}
   m_Layer: 0
   m_Name: RuletaAnimaciones - Yellow Subject
@@ -524,6 +528,62 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a8c0728f07c94a459690ea65c978973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  play: 0
+  personajeAAnimar: {fileID: 68015134}
+--- !u!114 &522480840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522480828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ebdc79e15b900d49a9b45422d00d620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  play: 0
+  personajeAAnimar: {fileID: 68015134}
+--- !u!114 &522480841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522480828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90fa74c57c63c74ba4b1365ffde1ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  play: 0
+  personajeAAnimar: {fileID: 68015134}
+--- !u!114 &522480842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522480828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3775b0dff76b834592138d616ee3c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  play: 0
+  personajeAAnimar: {fileID: 68015134}
+--- !u!114 &522480843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522480828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3dc42140570837479064b8328d79967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   play: 0
